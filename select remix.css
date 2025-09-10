@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors Remix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Header */
+        .header {
+            padding: 2rem;
+            background-color: #fff;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #2c3e95;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        
+        #about {
+            background-color: #f0f0f5;
+            padding: 2rem;
+        }
+
+        #about h2 {
+            font-size: 1.8rem;
+            color: #2c3e95;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        #about p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        #about em {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        #about a {
+            color: #2c7a2c;
+            text-decoration: none;
+        }
+
+        #about a:hover {
+            text-decoration: underline;
+        }
+
+        .note {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Tasks Section */
+        .tasks {
+         padding: 2rem;
+            background-color: #b5b5f9;
+            
+        }
+
+        .tasks h2 {
+            font-size: 1.8rem;
+            color: #2c3e95;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .tasks ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .tasks li {
+            padding: 0.3rem 0;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .tasks li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #666;
+        }
+
+        .tasks li:first-child {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .tasks li:nth-child(2) {
+            color: #ff8c00;
+        }
+
+        .inputs-label {
+            color: #2c7a2c;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .inputs-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .input-group label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        input[type="email"],
+        input[type="text"],
+        input[type="number"] {
+            padding: 0.4rem 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        input[type="email"] {
+            background-color: #fff3cd;
+        }
+
+        input[type="text"] {
+            background-color: #e7f3ff;
+        }
+
+        input[type="number"] {
+            background-color: #fff;
+            width: 80px;
+        }
+
+        /* More Content Section */
+        #more {
+            background-color: #f0f0f5;
+            padding: 2rem;
+        }
+
+        #more h2 {
+            font-size: 1.8rem;
+            color: #2c3e95;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        #more p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        #more p:first-of-type {
+            font-style: italic;
+        }
+
+        #more .note {
+            color: #666;
+        }
+
+        #more p:last-of-type {
+            color: #666;
+            font-weight: 500;
+        }
+
+        #more a {
+            color: #2c7a2c;
+            text-decoration: none;
+        }
+
+        #more a:hover {
+            text-decoration: underline;
+        }
+
+        .alt-link {
+            color: #2c3e95 !important;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #fff;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .inputs-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><span style="font-size: 3rem;">S</span>electors Remix</h1>
+        <p>This page is designed to help you practice CSS selectors and see inheritance in action.</p>
+    </div>
+
+    <section id="about">
+        <h2>About</h2>
+        <p><em>Inside About panel. Some text with an <strong>emphasis</strong> and a <a href="#">link</a>.</em></p>
+        <p class="note">+ I am a note inside #about.</p>
+    </section>
+
+    <section class="tasks">
+        <h2>Tasks</h2>
+        <ul>
+            <li>Read the directions</li>
+            <li>Write selectors</li>
+            <li>Check your work</li>
+        </ul>
+        
+        <span class="inputs-label">Inputs below:</span>
+        <div class="inputs-container">
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" value="you@example.com">
+            </div>
+            <div class="input-group">
+                <label>Text</label>
+                <input type="text" value="hello">
+            </div>
+            <div class="input-group">
+                <label>Number</label>
+                <input type="number" value="5">
+            </div>
+        </div>
+    </section>
+
+    <section id="more">
+        <h2>More Content</h2>
+        <p><em>First paragraph inside #more.</em></p>
+        <p class="note">+ Second paragraph with a note class.</p>
+        <p><strong>Third paragraph.</strong> <a href="#">A link</a> and another <a href="#" class="alt-link">alt link</a>.</p>
+    </section>
+
+    <div class="footer">
+        This footer message is outside of all sections.
+    </div>
+</body>
+</html>
